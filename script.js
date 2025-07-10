@@ -1,8 +1,7 @@
-// Initialize EmailJS
+// Initialize EmailJS with your Public Key (User ID)
 (function() {
-    // EmailJS will be initialized when user provides the API key
     if (typeof emailjs !== 'undefined') {
-        emailjs.init('YOUR_EMAILJS_USER_ID');
+        emailjs.init('d0Ljm6Dr4Y2SBnsSS'); // <-- Yahan apna Public Key daal diya
     }
 })();
 
@@ -114,8 +113,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     
     // Send email using EmailJS
     emailjs.send(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_7kpvbnq',           // <-- Yahan apna Service ID daal diya
+        'template_frdykqd',          // <-- Yahan apna Template ID daal diya
         templateParams
     )
     .then(function(response) {
