@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comtel Group - IT Solutions That Work</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@10.16.4/dist/framer-motion.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary-600">Comtel Group</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#strengths" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Strengths</a>
+                        <a href="#clients" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Clients</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Home</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">About</a>
+                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Services</a>
+                <a href="#strengths" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Strengths</a>
+                <a href="#clients" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Clients</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <div class="hero-content">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Simplifying IT
+                </h1>
+                <p class="text-xl sm:text-2xl md:text-3xl text-blue-100 mb-8 font-light">
+                    IT Solutions that work for your business
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="inline-flex items-center px-8 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                        Explore Services
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-600 transition-colors duration-300">
+                        Get In Touch
+                        <i class="fas fa-phone ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-element absolute top-20 left-10 w-20 h-20 border-2 border-white/20 rounded-full"></div>
+            <div class="floating-element absolute top-40 right-20 w-16 h-16 border-2 border-white/20 rounded-full"></div>
+            <div class="floating-element absolute bottom-20 left-20 w-24 h-24 border-2 border-white/20 rounded-full"></div>
+            <div class="floating-element absolute bottom-40 right-10 w-12 h-12 border-2 border-white/20 rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Comtel Group</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="about-content">
+                    <div class="prose prose-lg text-gray-700 space-y-6">
+                        <p>
+                            Comtel Communications is a professionally managed company incepted in the year 2002 and engaged in marketing and servicing of Premier Telecommunication / Office Automation, Electronic Security Systems & Biometrics Products, Innovative Fire Suppression System, and Logistics Management System.
+                        </p>
+                        <p>
+                            Over 20 years of presence in the Security & Surveillance Industry, Comtel is now a trusted partner of numerous companies. Our strength lies in our offer of one window service for customer requirements, providing total solutions and in our commitment to achieve total customer satisfaction, ON Time – Each Time.
+                        </p>
+                        <p>
+                            We offer tailor-made solutions across industries and are now a 20+ strong team of professionals with Direct / Indirect presence across India. We also offer complete IT solutions for all kinds of small, medium, and large organizations.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="relative">
+                        <div class="bg-primary-600 rounded-lg p-8 text-white">
+                            <div class="text-center">
+                                <div class="text-6xl font-bold mb-2">20+</div>
+                                <div class="text-xl">Years of Excellence</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6 mt-8">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold">1500+</div>
+                                    <div class="text-sm">Satisfied Customers</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold">24/7</div>
+                                    <div class="text-sm">Support Available</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Mission & Vision</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="mission-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bullseye text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Mission</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        To be the leading provider of security products and solutions establishing ourselves as a premier brand by continuous commitment towards excellence in quality, high performance, innovation, and customer satisfaction.
+                    </p>
+                </div>
+                <div class="vision-card bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Vision</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        To become a trusted brand in the global security industry, nurturing in our customers and communities an eternal sense of loyalty towards our products and services.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive IT and security solutions tailored to your business needs
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary-600">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-desktop text-primary-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Office Automation</h3>
+                        <p class="text-gray-600">
+                            Complete office automation solutions including telecommunications, networking, and productivity systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-red-600">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-fire-extinguisher text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Fire Safety</h3>
+                        <p class="text-gray-600">
+                            Advanced fire suppression systems and safety solutions to protect your business and assets.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-green-600">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Security & Surveillance</h3>
+                        <p class="text-gray-600">
+                            Electronic security systems, biometrics, and surveillance solutions for comprehensive protection.
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-purple-600">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Logistics</h3>
+                        <p class="text-gray-600">
+                            Logistics management systems to streamline your supply chain and operational efficiency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fire Products Subsection -->
+            <div class="bg-gray-50 rounded-lg p-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Fire Products</h3>
+                    <div class="w-16 h-1 bg-red-600 mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <i class="fas fa-fire-extinguisher text-red-600 text-3xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Fire Extinguishers</h4>
+                        <p class="text-gray-600 text-sm">High-quality fire extinguishers for all types of fires</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-exclamation-triangle text-red-600 text-3xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Fire Alarms</h4>
+                        <p class="text-gray-600 text-sm">Advanced fire detection and alarm systems</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-tint text-red-600 text-3xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-900 mb-2">Suppression Systems</h4>
+                        <p class="text-gray-600 text-sm">Innovative fire suppression technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section id="strengths" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Strengths</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="strength-card text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Customer Delight</h3>
+                    <p class="text-gray-600">
+                        Unique work culture devoted to customer satisfaction and building lasting relationships.
+                    </p>
+                </div>
+                <div class="strength-card text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Continuous Improvement</h3>
+                    <p class="text-gray-600">
+                        Concentrated practice of organizational values focused on continuous growth and innovation.
+                    </p>
+                </div>
+                <div class="strength-card text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Teamwork & Commitment</h3>
+                    <p class="text-gray-600">
+                        Strong team collaboration and unwavering commitment to delivering excellence.
+                    </p>
+                </div>
+                <div class="strength-card text-center bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Integrity & Excellence</h3>
+                    <p class="text-gray-600">
+                        Maintaining highest standards of integrity and excellence in all our operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Clients</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p class="text-xl text-gray-600">
+                    Trusted by over 1500+ satisfied customers across India
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Corporate Client A</div>
+                    </div>
+                </div>
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Tech Solutions B</div>
+                    </div>
+                </div>
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Enterprise C</div>
+                    </div>
+                </div>
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Industry Leader D</div>
+                    </div>
+                </div>
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Company E</div>
+                    </div>
+                </div>
+                <div class="client-card bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-gray-400 font-semibold">Organization F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-primary-600 mx-auto mb-4"></div>
+                <p class="text-xl text-gray-300">
+                    Get in touch with our team for your IT and security solutions
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="contact-info">
+                    <h3 class="text-2xl font-bold mb-8">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold mb-2">Address</h4>
+                                <p class="text-gray-300">
+                                    Comtel Communications<br>
+                                    [Full Address]<br>
+                                    [City, State, PIN Code]
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-primary-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold mb-2">Phone</h4>
+                                <p class="text-gray-300">+91 [Phone Number]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-primary-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold mb-2">Email</h4>
+                                <p class="text-gray-300">info@comtelgroup.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-globe text-primary-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-semibold mb-2">Website</h4>
+                                <p class="text-gray-300">www.comtelgroup.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form bg-white rounded-lg p-8 text-gray-900">
+                    <h3 class="text-2xl font-bold mb-6">Send Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">Comtel Group</h3>
+                    <p class="text-gray-300 mb-4">
+                        Your trusted partner for IT and security solutions since 2002.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Office Automation</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Fire Safety</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Security & Surveillance</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Logistics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#strengths" class="hover:text-white transition-colors">Our Strengths</a></li>
+                        <li><a href="#clients" class="hover:text-white transition-colors">Clients</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +91 [Phone Number]
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@comtelgroup.com
+                        </li>
+                        <li>
+                            <i class="fas fa-globe mr-2"></i>
+                            www.comtelgroup.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Comtel Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
