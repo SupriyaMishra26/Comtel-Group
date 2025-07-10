@@ -1,6 +1,9 @@
 // Initialize EmailJS
 (function() {
-    emailjs.init(process.env.EMAILJS_USER_ID || 'YOUR_EMAILJS_USER_ID');
+    // EmailJS will be initialized when user provides the API key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('YOUR_EMAILJS_USER_ID');
+    }
 })();
 
 // Mobile menu toggle
@@ -76,7 +79,7 @@ window.addEventListener('scroll', function() {
 
 // Animation on scroll
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.hero-content, .about-content, .about-image, .mission-card, .vision-card, .service-card, .strength-card, .client-card, .contact-info, .contact-form');
+    const elements = document.querySelectorAll('.hero-content, .about-content, .about-image, .value-card, .mission-card, .vision-card, .service-card, .strength-card, .client-card, .contact-info, .contact-form');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -111,8 +114,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     
     // Send email using EmailJS
     emailjs.send(
-        process.env.EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-        process.env.EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        'YOUR_SERVICE_ID',
+        'YOUR_TEMPLATE_ID',
         templateParams
     )
     .then(function(response) {
@@ -179,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Observe all animatable elements
-    document.querySelectorAll('.hero-content, .about-content, .about-image, .mission-card, .vision-card, .service-card, .strength-card, .client-card, .contact-info, .contact-form').forEach(el => {
+    document.querySelectorAll('.hero-content, .about-content, .about-image, .value-card, .mission-card, .vision-card, .service-card, .strength-card, .client-card, .contact-info, .contact-form').forEach(el => {
         observer.observe(el);
     });
 });

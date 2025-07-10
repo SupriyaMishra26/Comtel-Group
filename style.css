@@ -95,6 +95,7 @@ html {
 .hero-content,
 .about-content,
 .about-image,
+.value-card,
 .mission-card,
 .vision-card,
 .service-card,
@@ -111,6 +112,7 @@ html {
 .hero-content.animate-fadeInUp,
 .about-content.animate-fadeInUp,
 .about-image.animate-fadeInUp,
+.value-card.animate-fadeInUp,
 .mission-card.animate-fadeInUp,
 .vision-card.animate-fadeInUp,
 .service-card.animate-fadeInUp,
@@ -190,6 +192,17 @@ html {
 .client-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Value cards enhanced styling */
+.value-card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Mission and Vision cards enhanced styling */
